@@ -47,3 +47,15 @@ If user doesn't have permission for View and View is used on some Webpart Page Z
 If this checkbox is checked you need to specify the permission for users or groups like in SharePoint.
 
 I think that solution is simple and for me, it works without any problem. As I said this solution is not perfect and never will be but I am still working on it. With combination of Column and View permission you can get very nice results.
+
+### Installation:
+0. It will be better if you disable any other solutions which you use for column & view permission
+1. Download the wsp file. 
+2. Everything needed is included in wsp file so you just only need to Install it.
+Management Shell:
+   - Add-SPSolution c:\SPGuysCustomFieldPermission.wsp
+3. After Successful Installation Deploy it from Central Administration to your Site Collection or from
+Management Shell:
+   - Install-SPSolution –Identity SPGuysCustomFieldPermission.wsp –WebApplication http://intranet –GACDeployment
+4. Activate it on Site Collection.
+5. Done.
